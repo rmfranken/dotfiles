@@ -87,5 +87,16 @@ fi
 #     echo "Jellyfin Media Player already installed, skipping."
 # fi
 
+# ----------------------------
+#tailscale
+# ----------------------------
+
+if ! is_installed tailscale; then
+    echo "=== Installing Tailscale ==="
+    curl -fsSL https://tailscale.com/install.sh | sh
+    sudo tailscale up
+else
+    echo "Tailscale already installed, skipping."
+fi
 
 echo "=== All programs installed successfully! ==="
