@@ -40,7 +40,12 @@ fi
 # ----------------------------
 if ! is_installed steam; then
     echo "=== Installing Steam ==="
-    sudo apt install -y steam
+    # Download the Steam .deb package
+    curl -o ~/Downloads/steam.deb https://cdn.fastly.steamstatic.com/client/installer/steam.deb
+
+    # Install the downloaded .deb package
+    sudo dpkg -i ~/Downloads/steam.deb
+    sudo apt-get install -f -y  # Fix dependencies if needed
 else
     echo "Steam already installed, skipping."
 fi
