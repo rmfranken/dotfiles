@@ -41,7 +41,7 @@ fi
 if ! is_installed steam; then
     echo "=== Installing Steam ==="
     # Download the Steam .deb package
-    curl -o ~/Downloads/steam_latest.deb https://cdn.fastly.steamstatic.com/client/installer/steam.deb
+    wget -O ~/Downloads/steam_latest.deb https://cdn.fastly.steamstatic.com/client/installer/steam.deb
 
     # Install the downloaded .deb package
     sudo dpkg -i ~/Downloads/steam_latest.deb
