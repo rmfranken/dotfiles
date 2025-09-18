@@ -10,6 +10,12 @@ is_installed() {
 }
 
 # ----------------------------
+# Brave
+# ----------------------------
+
+curl -fsS https://dl.brave.com/install.sh | sh
+
+# ----------------------------
 # Spotify
 # ----------------------------
 if ! is_installed spotify-client; then
